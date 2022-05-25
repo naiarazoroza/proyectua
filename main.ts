@@ -17,6 +17,10 @@ basic.forever(function () {
         DFRobotMaqueenPlus.mototRun(Motors.ALL, Dir.CW, 50)
     } else if (distantzia > 20) {
         DFRobotMaqueenPlus.mototRun(Motors.ALL, Dir.CW, 20)
+    } else if (distantzia > 10) {
+        DFRobotMaqueenPlus.mototStop(Motors.ALL)
+    } else {
+    	
     }
     atala_1 += 1
 })
