@@ -18,12 +18,14 @@ basic.forever(function () {
                 if (DFRobotMaqueenPlus.readPatrol(Patrol.L1) == 0 && DFRobotMaqueenPlus.readPatrol(Patrol.R1) == 1) {
                     DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CW, 140)
                     DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CW, 0)
+                } else {
+                    if (DFRobotMaqueenPlus.readPatrol(Patrol.L1) == 1 && DFRobotMaqueenPlus.readPatrol(Patrol.R1) == 1 && (DFRobotMaqueenPlus.readPatrol(Patrol.L2) == 1 && DFRobotMaqueenPlus.readPatrol(Patrol.R2) == 1)) {
+                        DFRobotMaqueenPlus.mototStop(Motors.ALL)
+                    }
                 }
             }
         }
     }
-    atala_2 = 0
-    atala_3 = 1
 })
 basic.forever(function () {
     if (atala_1 == 1) {
